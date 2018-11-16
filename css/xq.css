@@ -1,0 +1,74 @@
+article section.xq{
+	width: 96%;
+	overflow: hidden;
+	padding: 5% 2%;
+	text-align: center;
+	background: #FFFFFF;
+	border-bottom:0.5rem solid #f3f2f2;
+}
+.xq p{
+	color: #000000;
+	font-weight: normal;
+	font-size: 0.45rem;
+	line-height: 0.9rem;
+	margin-bottom: 0.2rem;
+}
+.xq b{
+	color: #5c615c;
+	font-size: 0.4rem;
+	font-weight: normal;
+	display: block;
+}
+.xq video{
+	width: 100%;
+	overflow: hidden;
+}
+.xq h1{
+	width:50%;
+	overflow: hidden;
+	margin: 0 auto;
+	color: #5c615c;
+	letter-spacing: 0;
+	font-size: 0.4rem;
+	font-weight: normal;
+}
+.xq h1 img{
+	width: 100%;
+	overflow: hidden;
+}
+.xiangqing .hotspot{
+	margin-top:0.3rem;
+}
+/*新闻详情页面*/
+.xinwen{
+	width: 96%;
+	padding: 0 2%;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #FFFFFF;
+}
+.xinwen p{
+	width: 100%;
+	overflow: hidden;
+	color: #5c615c;
+	font-size: 0.4rem;
+	font-weight: normal;
+	line-height: 0.8rem;
+	letter-spacing: 0.1rem;
+}
+.xinwen p b{
+	text-align: center;
+	color: #ff0101;
+	font-weight: normal;
+}
+.xinwen .xinwen_p{
+	margin-top: 0;
+	text-align: center;
+}
+.xinwen .xw_p{
+	text-align: center;
+}
+.xinwen .xw_p b{
+	color: #ff0101;
+	font-weight: normal;
+}

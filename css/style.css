@@ -1,0 +1,522 @@
+/* 
+ * #page-layout
+ * #page-header
+ * #searchbar
+ * #page-nav
+ * #column-base
+ * #column-swiper
+ * #column-hot
+ * #column-top
+ * #topic-swiper
+ * #column-focus
+ * #column-depth
+ * #column-commom
+ * #topicbar
+ * #page-footer
+ */
+
+
+/*20171031 qufan font-size line-height*/
+
+
+/*---------- #page-layout ----------*/
+
+html,
+body {
+    background-color: #999;
+}
+
+html.noscroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+html.noscroll .container {
+    height: 0;
+    overflow: visible;
+}
+
+.container {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #eee;
+}
+
+
+/*---------- #page-header ----------*/
+
+.container>header {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: #2D8BDE;
+}
+
+.container>header span {
+    height: 1.5rem;
+    text-indent: -200%;
+    overflow: hidden;
+    float: left;
+}
+
+.container>header span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container>header .logo {
+    width: 2.0rem;
+    height: 0.8rem;
+    margin-top: 0.35rem;
+    background: url('http://www.xinhuanet.com/m/img/logo.png') no-repeat left center;
+    background-size: auto 100%;
+}
+
+.container>header .pagename {
+    height: 0.5rem;
+    margin-top: 0.33rem;
+    text-indent: 0;
+    line-height: 0.5rem;
+    color: #fff;
+    padding-left: 0.1rem;
+    font-size: 0.4rem;
+}
+
+.container>header .pcref {
+    float: right;
+    width: 1.5rem;
+    background: url('http://www.xinhuanet.com/m/img/ico_topc.png') no-repeat left center;
+    background-size: 100% auto;
+}
+
+.container>header .sinadoor {
+    float: right;
+    width: 1.5rem;
+    background: url('http://www.xinhuanet.com/m/img/sinalogo_35.png') no-repeat center;
+    background-size: 40% auto;
+}
+
+.container>header .search {
+    float: right;
+    width: 1rem;
+    background: url('http://www.xinhuanet.com/m/img/ico_search.png') no-repeat right center;
+    background-size: 50% auto;
+}
+
+.container>header .search.off {
+    background-image: url('http://www.xinhuanet.com/m/img/ico_close.png');
+}
+
+
+/*---------  #searchbar -----------*/
+
+#searchbar {
+    position: absolute;
+    z-index: 9999;
+    top: 1.5rem;
+    right: 0;
+    left: 0;
+    height: 0;
+    background-color: #eee;
+    transition: all 0.3s;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#searchbar.show {
+    opacity: 1;
+    height: 1.5rem;
+    display: block;
+}
+
+.searchbar-wrapper {
+    position: relative;
+    height: 1.0rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 0.1rem;
+    font-size: 0.5rem;
+}
+
+.search-kwd {
+    float: left;
+    width: 88%;
+    background-color: #fff;
+}
+
+.search-kwd input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    line-height: 1rem;
+    text-indent: 5px;
+    font-size: 0.5rem;
+}
+
+.search-submit {
+    float: left;
+    width: 12%;
+}
+
+.search-submit button {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 1.0rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-left: 1px solid #ccc;
+    background: transparent url('http://www.xinhuanet.com/m/img/icon_search.png') no-repeat center center;
+    -webkit-background-size: auto 60%;
+    background-size: auto 60%;
+    text-indent: -300%;
+    overflow: hidden;
+}
+
+
+/*----------- #page-nav ----------*/
+
+.mainnav {
+    height: 1.0rem;
+    /* 濠婃艾濮╅崡鐘辩秴 */
+}
+
+.nav-container {
+    position: relative;
+    height: 1.0rem;
+    width: 10.0rem;
+    font-size: 0.5rem;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container.fixtop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+}
+
+.nav-container.fixtop:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.nav-wrapper {
+    float: left;
+    height: 1.0rem;
+    width: 9.0rem;
+    overflow: hidden;
+}
+
+.nav-content {
+    height: 2.0rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-list {
+    width: 1000px;
+    min-width: 9.0rem;
+    height: 1.0rem;
+    background-color: #eee;
+}
+
+.nav-item {
+    float: left;
+}
+
+.nav-link {
+    display: block;
+    font-size: 0.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    line-height: 1.0rem;
+    text-decoration: none;
+    color: #333 !important;
+}
+
+.nav-item-active {
+    color: #187dd0 !important;
+}
+
+.nav-more-btn {
+    position: relative;
+    float: right;
+    width: 1.0rem;
+    height: 1.0rem;
+    background: #fff;
+    text-align: center;
+}
+
+.nav-more-btn.fixdup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.nav-more-btn a {
+    display: block;
+    width: 1.0rem;
+    height: 1.0rem;
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav-more-content {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: auto;
+    background-color: #eee;
+    -webkit-transform: scale(0, 0.1);
+    transform: scale(0, 0.1);
+    -webkit-transition: all 0.2s;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transform-origin: 100% 10%;
+    transform-origin: 100% 10%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-more-content.show {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.nav-list-head {
+    position: relative;
+    height: 1.2rem;
+    z-index: 1;
+    background: #eee;
+    box-shadow: 0 10px 10px #eee;
+}
+
+.nav-list-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: auto;
+}
+
+.nav-more-content h2 {
+    font-size: 0.4rem;
+    margin-left: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-more-content h2:first-of-type {
+    margin-top: 1.4rem;
+    font-size: 0.5rem;
+}
+
+.nav-more-content ul {
+    width: 8.5rem;
+    margin-bottom: 0.4rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 0.4rem;
+}
+
+.nav-more-content .nav-close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.4rem;
+    height: 1.0rem;
+    width: 1.0rem;
+    z-index: 2;
+    text-indent: 100%;
+    cursor: pointer;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.3s 0.4s;
+    transition: all 0.3s 0.4s;
+    overflow: hidden;
+}
+
+.nav-close:after,
+.nav-close:before {
+    border-color: #333 !important;
+}
+
+.nav-more-content.show .nav-close {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav-more-content ul:after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.nav-more-content li {
+    float: left;
+    width: 2.0rem;
+    line-height: 0.8rem;
+    text-align: center;
+    margin-right: 0.11rem;
+    margin-bottom: 0.11rem;
+    background-color: #fff;
+}
+
+.topic-list li:first-child {
+    font-size: 0.35rem;
+    text-align: center;
+    margin-right: 0.11rem;
+    margin-bottom: 0.11rem;
+    background-color: #fff;
+}
+
+.language-list li:last-child {
+    width: 4.11rem;
+}
+
+.nav-more-content a {
+    display: block;
+    color: #333 !important;
+}
+/*---------#page-footer----------*/
+
+.container>footer {
+    background: #187cd1;
+    padding: 0 10px 0.4rem;
+    color: #fff;
+    font-size: 0.4rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/*---------- #other-cfg ----------*/
+
+a:visited {
+    color: #999;
+}
+
+a.getmore {
+    color: #333 !important;
+}
+
+a.getmore:after {
+    content: ' >';
+}
+
+.topicbar a {
+    color: #fff !important;
+}
+
+.ico-add:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 40%;
+    top: 0;
+    bottom: 0;
+    border-left: 3px solid #187dd0;
+    -webkit-transform: translateX(-1.5px);
+    transform: translateX(-1.5px);
+}
+
+.ico-add:before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    border-top: 3px solid #187dd0;
+    -webkit-transform: translateY(-1.5px);
+    transform: translateY(-1.5px);
+}
+
+.keyword {
+    display: none;
+}
+
+.home .keyword {
+    display: block;
+}
+
+
+/*---------- #desktop ----------*/
+
+.desktop {
+    display: none;
+    z-index: 990;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 7rem;
+    margin-left: -3.6rem;
+    height: rem;
+    background: url('http://www.xinhuanet.com/m/img/desktop.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    height: 3rem;
+}
+
+.desktop:before {
+    position: absolute;
+    content: '+';
+    top: 0rem;
+    right: 0.1rem;
+    line-height: 1;
+    font-size: 0.6rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.desktop-info {
+    padding: 0.6rem 0.1rem 0 2.2rem;
+}
+
+.desktop-info span {
+    display: block;
+    font-size: 0.4rem;
+    line-height: 0.5rem;
+}
+
+.desktop-info b {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: url('http://www.xinhuanet.com/m/img/desktop_normal.png') 0 0 no-repeat;
+    background-size: 100% auto;
+}
+
+.desktop-info b.desk-safari {
+    background: url('http://www.xinhuanet.com/m/img/desktop_safari.png') 0 0 no-repeat;
+    background-size: 100% auto;
+}
